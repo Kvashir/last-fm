@@ -35,4 +35,135 @@ reggae: saturate(10%);
 
 /* Utiliza  la propiedad counter-increment: step-counter; para pintar el número de la canción
  */
+ *{
+     padding: 0;
+     margin: 0;
+     text-decoration: none;
+     
+ }
+body{
+    margin: 0px;
+    counter-reset: step-count;
+    font-family:Open Sans,Lucida Grande,Helvetica Neue,Helvetica,Arial,Sans-serif;
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
+    h1{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: #222;
+        margin: 0px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    ul.generos{
+        display: flex;
+        list-style: none;
+        li{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            margin: 10px;
+        }
+        li:nth-child(1){
+            background-image: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/366962d5733a4aee8bee4a136c239d47.jpg");
+            filter: sepia(90%);
+            background-position: center;
+            background-size: cover;
+            
+        }
+        li:nth-child(2){
+            background-image: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/51810a59cb17449bb2d6b8b62d63ce78.jpg");
+            filter: contrast(200%);
+            background-position: center;
+            background-size: cover;
+        }
+        li:nth-child(3){
+            background-image: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/c825233e09af4641a5ce7b6ece883aae.jpg");
+            filter: grayscale(50%);
+            background-position: center;
+            background-size: cover;
+        }
+        li:nth-child(4){
+            background-image: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/c0a9af93c8c843afb43cd6dc24b0bbf3.jpg");
+            filter: hue-rotate(90deg);
+            background-position: center;
+            background-size: cover;
+        }
+        li:nth-child(5){
+            background-image: url("https://lastfm.freetls.fastly.net/i/u/avatar300s/94428d295a60403e9327cbfb86e2fbf6.jpg");
+            filter: saturate(10%);
+            background-position: center;
+            background-size: cover;
+        }
+        a{
+            color:#f2f2f2;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+
+    }
+    ul.tops{
+
+        display: flex;
+        list-style: none;
+        justify-content: center;
+        li{
+            padding: 15px;
+        }
+        a{
+            font-size: 20px;
+            font-weight:bold;
+            color:#222;
+            border: none;
+            &:hover{
+                text-decoration: none;
+            }
+            &:focus{
+                color:#B90000;
+            }
+            
+        }
+    }
+}
+    h2{
+        margin: 20px;
+        font-weight:bold;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+       li{
+         margin-left: 10px;
+         a{
+            font-size: 20px;
+            color:#222;
+            margin-left: 10px;
+            &:nth-child(2){
+                margin-left: 30px;
+                font-weight:bold;
+            }
+         }
+         &:nth-child(odd){
+             background-color: #f2f2f2; 
+         }
+         div{
+         }
+       }
+        
+    }
+}
+// $color-primary:  #222
+// $color-secondary: rgba(110, 69, 51, 1);
+// $color-focus-menu: #B90000; 
+// $color-background: #fff;
+// $color-list-odd: #f2f2f2;    
