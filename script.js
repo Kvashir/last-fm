@@ -167,24 +167,3 @@ function changeFocus(e) {
     document.querySelector(".menu-item-selected").innerHTML = e.path[0].innerHTML;
 
 }
-function test() {
-    const obj = [
-        { "order_number": "9427",
-         "brand_name": "Romance",
-          "product_name": "Test Brightness",
-           "price": "54900",
-            "quantity": "1",
-             "total_discount": "0",
-              "seller_commission_percent": "0.15", "logistic_cost": "3500", "seller_id": "1" }, 
-              { "order_number": "9426", "brand_name": "Daytona", "product_name": "Test Finesse", "price": "32000", "quantity": "1", "total_discount": "0", "seller_commission_percent": "0.2", "logistic_cost": "3500", "seller_id": "2" }, 
-              { "order_number": "9425", "brand_name": "Romance", "product_name": "Test Rover", "price": "47900", "quantity": "1", "total_discount": "0", "seller_commission_percent": "0.15", "logistic_cost": "3500", "seller_id": "1" }]
-
-
-    const res = obj.reduce((p, c) => {
-        p[c.brand_name] = (p[c.brand_name] || 0) + (c.price * c.quantity) + 1 + c.seller_commission_percent * 1
-        return p;
-    }, {});
-
-
-    console.log(res);
-}
